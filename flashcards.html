@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="description" content="Study anatomy flashcards across 11 body systems.">
+  <title>Anatomy Flashcards — Form &amp; Function</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="popout-body">
+  <div class="app-shell popout-shell">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Form and Function home"><img class="school-logo" src="images/mesa-college-logo.png" alt="San Diego Mesa College"><span class="brand-divider" aria-hidden="true"></span><span>form &amp; function</span></a>
+      <div class="top-note"><span class="live-dot"></span> ANATOMY FLASHCARDS</div>
+      <a class="back-link" href="index.html">← <span>STUDY GUIDE</span></a>
+    </header>
+    <main class="popout-main">
+      <div class="popout-heading"><div class="eyebrow"><span>01</span><span class="eyebrow-line"></span><span>ACTIVE RECALL</span></div><h1>Study the<br><em>systems.</em></h1><p>Flip a card, check your understanding, and keep moving.</p></div>
+      <section class="study-area" aria-label="Anatomy flashcards">
+        <div class="study-head">
+          <div class="deck-select-wrap"><label class="field-label" for="deckSelect">STUDY DECK</label>
+            <select id="deckSelect" aria-label="Choose an anatomy study deck">
+              <option value="all">All body systems</option><option value="skeletal">Skeletal system</option><option value="muscular">Muscular system</option><option value="nervous">Nervous system</option><option value="cardiovascular">Cardiovascular system</option><option value="respiratory">Respiratory system</option><option value="digestive">Digestive system</option><option value="urinary">Urinary system</option><option value="endocrine">Endocrine system</option><option value="integumentary">Integumentary system</option><option value="lymphatic">Lymphatic &amp; immune</option><option value="reproductive">Reproductive system</option>
+            </select>
+          </div>
+          <div class="progress-wrap"><div class="progress-meta"><span>SESSION PROGRESS</span><span id="progressText">01 <i>/</i> 250</span></div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div>
+        </div>
+        <div class="card-stage">
+          <div class="card-counter"><span id="counterCurrent">01</span><span class="counter-slash">/</span><span id="counterTotal">250</span></div>
+          <button class="flashcard" id="flashcard" aria-label="Flashcard. Press enter or space to reveal the answer" aria-live="polite">
+            <span class="card-topline"><span id="cardCategory">SKELETAL SYSTEM</span><span class="card-star" aria-hidden="true">✳</span></span>
+            <span class="card-center"><span class="card-prompt" id="cardPrompt">What is the longest bone in the body?</span><span class="card-answer" id="cardAnswer" aria-hidden="true">Femur</span><span class="card-name" id="cardName" aria-hidden="true">Thigh bone · supports body weight</span><span class="card-detail" id="cardDetail" aria-hidden="true"></span></span>
+            <span class="card-footer"><span class="flip-symbol">↻</span><span id="flipHint">TAP TO REVEAL</span><span class="card-index">FORM &amp; FUNCTION · <span id="cardId">01</span></span></span>
+          </button>
+          <div class="card-shadow"></div>
+          <div class="confidence" id="confidence" aria-label="How well did you know it?" hidden><span class="confidence-label">HOW WELL DID YOU KNOW IT?</span><div class="confidence-actions"><button class="rating again" data-rating="again"><span>↺</span> REVIEW</button><button class="rating got-it" data-rating="got"><span>✓</span> KNOW IT</button></div></div>
+        </div>
+        <div class="controls"><button class="nav-button" id="prevButton" aria-label="Previous card"><span>←</span></button><div class="keyboard-hint"><kbd>←</kbd><kbd>→</kbd> TO NAVIGATE <span class="hint-divider">·</span> <kbd>SPACE</kbd> TO FLIP</div><button class="nav-button next" id="nextButton" aria-label="Next card"><span>→</span></button></div>
+        <div class="session-stats"><div><span class="stat-number" id="knownCount">0</span><span class="stat-label">KNOW IT</span></div><span class="stat-separator"></span><div><span class="stat-number" id="reviewCount">0</span><span class="stat-label">TO REVIEW</span></div><button class="reset-button" id="resetButton">RESET PROGRESS <span>↗</span></button></div>
+      </section>
+    </main>
+    <footer><span>UNDERSTAND THE BODY, ONE SYSTEM AT A TIME.</span><span>BUILT FOR CURIOUS MINDS <span class="footer-star">✳</span></span></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
